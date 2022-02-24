@@ -1,1 +1,9 @@
-<p>list-products works!</p>
+<div class="title">
+  {{ titleHome }}
+</div>
+
+<app-card
+  [showFavoriteIcon]="true"
+  [cards]="cards"
+  (onFavoriteClick)="handleCardClick($event)">
+</app-card>

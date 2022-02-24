@@ -2,25 +2,29 @@
   <div class="content">
     <div class="header-informations">
       <ul>
-        <li id="title-store">MagaNets</li>
+        <a routerLink="">
+          <li id="title-store">{{ titleApp }}</li>
+        </a>
         <li>
           <span class="material-icons">
             place
           </span>
-          Cidade: São Paulo-SP
+          {{ city }}
         </li>
         <li>
           <span class="material-icons">
             call
           </span>
-          Central de Atendimento
+          {{ callCenter }}
         </li>
-        <li>
-          <span class="material-icons">
-            favorite
-          </span>
-          Lista de Desejos
-        </li>
+        <a routerLink="wishlist">
+          <li>
+            <span class="material-icons">
+              favorite
+            </span>
+            {{ wishlist }}
+          </li>
+        </a>
       </ul>
     </div>
 
@@ -28,11 +32,11 @@
       <div class="container">
         <button class="btn-search" type="button">
           <span class="material-icons">
-              search
+            search
           </span>
         </button>
 
-        <input class="input-search" type="text" placeholder="Busca">
+        <input matInput class="input-search" type="text" [placeholder]="busca">
       </div>
 
     </div>

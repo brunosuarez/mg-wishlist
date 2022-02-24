@@ -1,0 +1,38 @@
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.container{
+  padding: 20px 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.content{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-list{
+  width: 200px;
+  margin: 10px;
+}
+
+.informations-card{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+

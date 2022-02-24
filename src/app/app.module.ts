@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,11 +7,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { WishlistProductsComponent } from './components/wishlist-products/wishlist-products.component';
-import { HeaderComponent } from './shared/components/templates/header/header.component';
-import { SearchComponent } from './shared/components/templates/search/search.component';
-import { CardComponent } from './shared/components/templates/card/card.component';
+import { HeaderComponent } from './components/template/header/header.component';
+import { CardComponent } from './components/card/card.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ListProductsComponent,
     WishlistProductsComponent,
     HeaderComponent,
-    SearchComponent,
     CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

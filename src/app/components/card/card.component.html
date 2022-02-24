@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="content">
+    <mat-card class="card-list" *ngFor="let card of cards">
+      <mat-card-header *ngIf="showFavoriteIcon">
+        <a
+          (click)="handleCardClick(card)"
+          [ngStyle]="{ color: card.active ? 'red' : 'black' }"
+        >
+          <span class="material-icons"> favorite </span>
+        </a>
+        <br />
+      </mat-card-header>
+      <mat-card-header *ngIf="showCloseIcon">
+        <a (click)="removeFromWishlist(card)">
+          <span class="material-icons"> close </span>
+        </a>
+        <br />
+      </mat-card-header>
+      <img mat-card-image [src]="card.image" />
+      <mat-card-content class="informations-card">
+        <mat-card-title>{{ card.title }}</mat-card-title>
+        <mat-card-subtitle>{{ card.price | currency: card.currencyId }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
